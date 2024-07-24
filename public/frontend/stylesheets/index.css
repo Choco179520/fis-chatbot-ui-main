@@ -23,9 +23,7 @@
 /* Typing animation keyframes */
 /* ================================================================= */
 @keyframes typing {
-  0%,
-  80%,
-  100% {
+  0%, 80%, 100% {
     opacity: 1;
     transform: translateY(0);
   }
@@ -59,11 +57,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background-image: url(http://chat-fis.epn.edu.ec:5500/static/assets/background-image.png);
+  background-image: url(http://localhost:3002/static/assets/background-image.png);
 }
 
 .chatbot__toggler {
@@ -82,16 +80,12 @@ body {
   background: var(--blue);
   transition: all 0.2s ease;
   -webkit-tap-highlight-color: transparent;
-  box-shadow:
-    rgba(0, 0, 0, 0.1) 0 2px 6px,
-    rgba(0, 0, 0, 0.2) 0 4px 16px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 6px, rgba(0, 0, 0, 0.2) 0 4px 16px;
 }
-.chatbot__toggler:active,
-.chatbot__toggler:focus {
+.chatbot__toggler:active, .chatbot__toggler:focus {
   outline: none; /* Remove the default focus outline */
 }
-.chatbot__toggler:active span,
-.chatbot__toggler:focus span {
+.chatbot__toggler:active span, .chatbot__toggler:focus span {
   border-radius: 50%; /* Ensure border-radius is applied during click/focus */
 }
 .chatbot__toggler span {
@@ -124,9 +118,7 @@ body.chatbot--show .chatbot {
   opacity: 1;
   pointer-events: auto;
   transform: scale(1);
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .chatbot {
@@ -141,12 +133,8 @@ body.chatbot--show .chatbot {
   pointer-events: none;
   transform: scale(0.5);
   transform-origin: bottom right;
-  box-shadow:
-    0 0 128px 0 rgba(0, 0, 0, 0.1),
-    0 32px 64px -48px rgba(0, 0, 0, 0.5);
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
+  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .chatbot header {
   display: flex;
@@ -169,9 +157,7 @@ body.chatbot--show .chatbot {
   cursor: pointer;
   transform: translateY(-50%);
   -webkit-tap-highlight-color: transparent;
-  transition:
-    background-color 0.3s ease,
-    border-radius 0.3s ease;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
 }
 .chatbot header #toggler-btn--expand:hover {
   background-color: rgba(255, 255, 255, 0.2);
@@ -205,7 +191,7 @@ body.chatbot--show .chatbot {
   border-radius: 100%;
 }
 .chatbot header .chatbot-header-logo::after {
-  content: '';
+  content: "";
   position: absolute;
   right: 20px;
   bottom: -2px;

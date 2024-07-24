@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' 'sha512-MFqlyZl8A8vgzSC3NLpkxdGkpi/Kt8l06Y6HzUXo4lS5+fT8vu7HXQ/fdfTtPTRseZ2p3tyl6R0LCIuZe3jt9A==';
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      img-src 'self' http://chat-fis.epn.edu.ec:8080/images/ http://localhost:5500/static/assets/ http://chat-fis.epn.edu.ec:5500/static/assets/background-image.png;
+      font-src 'self' https://fonts.gstatic.com;
+      connect-src 'self' http://chat-fis.epn.edu.ec:8080 http://chat-fis.epn.edu.ec:8080/api/messages http://chat-fis.epn.edu.ec:8080/api/actions;
+    "
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>FIS Chatbot</title>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="./frontend/stylesheets/index.css" />
+</head>
+<body class="chatbot--show">
+  <button class="chatbot__toggler" aria-label="Cerrar o abrir el chatbot.">
+    <span class="material-symbols-outlined" aria-hidden="true"> forum </span>
+    <span class="material-symbols-outlined" aria-hidden="true"> close </span>
+  </button>
+  <div class="chatbot">
+    <header>
+      <div class="chatbot-header-logo" id="logo-wrapper">
+            <span class="chatbot-logo-wrapper"><img
+              src="static/assets/svg-panther--white.svg"
+              alt="Pantera blanca abriendo la boca."
+            /></span>
+      </div>
+      <h1>Pantera</h1>
+      <span
+        id="toggler-btn--expand"
+        class="material-symbols-outlined"
+        aria-hidden="true"
+      >
+            expand_more
+          </span>
+    </header>
+    <div class="chatbot__content">
+      <ul class="chatbot__message-box" aria-live="polite"></ul>
+      <div class="chatbot__input-box">
+          <textarea
+            placeholder="Escribe tu mensaje"
+            id="input-box"
+            required
+            aria-label="Campo para escribir un mensaje de texto al chatbot."
+          ></textarea>
+        <span
+          id="chatbot__send-button"
+          class="material-symbols-outlined"
+          role="button"
+          aria-hidden="true"
+        >
+            <img
+              src="static/assets/svg-icon--send-button.svg"
+              alt="Botón para enviar un mensaje en forma de avión."
+            />
+          </span>
+      </div>
+    </div>
+  </div>
+  <script src="./frontend/js/bundle.js"></script>
+</body>
+</html>
